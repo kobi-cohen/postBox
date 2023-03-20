@@ -18,8 +18,9 @@ app.get('/',(req,res)=>{
 
 app.post('/updateBox',(req,res)=>{
     console.log(res.body)
-    res.send('than you')
+    res.json({res:'than you'})
 })
+
 app.listen(2000,()=>{
     console.log('connected port 2000')
 })
