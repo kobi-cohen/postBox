@@ -3,6 +3,7 @@ const express = require('express')
 const app = express()
 
 app.use(cors())
+app.use(express.urlencoded());
 app.use(express.json())
 const boxesList = [
     {boxNumber:'100',boxId:'a1'},
@@ -17,8 +18,8 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/updateBox',(req,res)=>{
-    console.log(res.body)
-    res.json({res:'than you'})
+    console.log(req.body)
+    res.json({res:'than you '+req.body.name})
 })
 
 app.listen(2000,()=>{

@@ -11,6 +11,7 @@ const drawbtns = (boxList) =>{
     console.log('starting to drawing')
     boxList.forEach(element => {
         const btn = document.createElement('button')
+        btn.addEventListener('click',()=>sendBoxesList({name:element.boxNumber}))
         btn.textContent=element.boxNumber
         div.appendChild(btn)
         
