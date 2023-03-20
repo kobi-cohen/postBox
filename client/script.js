@@ -47,8 +47,10 @@ const sendBoxesList  = async (data)=>{
                 referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
                 body: JSON.stringify(data), // body data type must match "Content-Type" header
               });
-             console.log(await req.json()) // parses JSON response into native JavaScript objects
+             const res = await req.json() // parses JSON response into native JavaScript objects
+              console.log(res.res)
             }
+
         
 
         catch(e){

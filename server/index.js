@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 
 app.use(cors())
-app.use(express.urlencoded());
+// app.use(express.urlencoded());
 app.use(express.json())
 const boxesList = [
     {boxNumber:'100',boxId:'a1'},
